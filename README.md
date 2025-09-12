@@ -75,8 +75,11 @@ Note: the assignment below was written using AI, so feel free to utilize it heav
 ### You’re Done When:
 
 ✅ You created a branch named `a1/<your-handle>-intro`
+
 ✅ You added a file called `intro.md` with your student card
+
 ✅ You made one tiny edit to this README
+
 ✅ You pushed changes and opened a PR with:
 
 - Title: `A1: <Your Name> — Git boot-up`
@@ -109,7 +112,7 @@ Note: the assignment below was written using AI, so feel free to utilize it heav
    Create a new file:
 
    ```
-   students/<your-handle>.md
+   intro.md
    ```
 
    Paste in the **Submission Template** below.
@@ -147,7 +150,7 @@ Note: the assignment below was written using AI, so feel free to utilize it heav
 
 ---
 
-## Submission Template (students/<your-handle>.md)
+## Submission Template (intro.md)
 
 ```markdown
 # A1 — Student Card
