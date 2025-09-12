@@ -21,35 +21,6 @@
 
 ---
 
-# FRC 7157 Bootcamp — Course Intro & Assignment A1: Git Boot-Up
-
-> **Welcome to Bootcamp!**
-> This course is about building **competition-ready robot code** using the exact stack we’ll use in season.
->
-> - You’ll learn by **doing**, not just reading.
-> - We’ll start hands-on, then explain the theory behind what you built.
-> - We won’t cover “Java 101.” If you need a refresher, check out Codecademy, Oracle’s Java tutorials, or a Java 17 crash course on YouTube alongside this bootcamp.
-
----
-
-## What You’ll Learn
-
-- **Swerve drive programming** (kinematics, odometry, field-centric control).
-- **Logging & debugging** with AdvantageKit + AdvantageScope.
-- **Autonomous routines** with trajectories and vision.
-- **Robot simulation**: physics, sensors, cameras — test code without a robot.
-
----
-
-## Our Approach
-
-- **Hands-on first**: Build it now, understand it later.
-- **Read the docs**: Short weekly pre-reads give you just enough theory.
-- **Version control = safety net**: Git + GitHub protect you from mistakes. You’ll learn why we never commit directly to `main` during season.
-- **Logs or it didn’t happen**: Every feature will be tested and logged for debugging.
-
----
-
 ## Step 0: Setup (before class)
 
 1. **Install WPILib**
