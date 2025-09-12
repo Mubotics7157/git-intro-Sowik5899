@@ -21,10 +21,6 @@
 
 ---
 
-Here’s a revised version of your tutorial, rewritten for **clarity**, **step-by-step guidance**, and **student-friendliness**, while still keeping the competition-grade ethos intact.
-
----
-
 # FRC 7157 Bootcamp — Course Intro & Assignment A1: Git Boot-Up
 
 > **Welcome to Bootcamp!**
@@ -96,6 +92,8 @@ You’ll always:
 - Never push straight to `main`
 
 ---
+
+Note: the assignment below was written using AI, so feel free to utilize it heavily during these learning stages as well, for common workflows such as this it usually gives very accurate advice
 
 # Assignment A1: Git Boot-Up
 
