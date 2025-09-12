@@ -1,107 +1,197 @@
-# :wave: The Basics of GitHub 
+# FRC 7157 Bootcamp — Course Intro & Assignment A1: Git Boot-Up
 
-## 🤓 Course overview and learning outcomes 
+> **This course will throw you into the deep end.** We focus on **competition-grade code** with the exact stack you’ll use in season, using a progressive scaffolded approach. You’ll learn by doing, with a mix of theory and practice. You will not learn everything, but you will learn how to learn.
+> We **will not** teach general Java syntax or fundamentals here. If you need that, use a Java 17 primer (Codecademy / Udemy / “Java Programming” on YouTube / Oracle tutorials) **in parallel**.
 
-The goal of this course is to give you a brief introduction to GitHub. We’ll also provide you with materials for further learning and a few ideas to get you started on our platform. 🚀
+---
 
-## :octocat: Git and GitHub
+## What you’ll learn (high-level)
 
-Git is a **distributed Version Control System (VCS)**, which means it is a useful tool for easily tracking changes to your code, collaborating, and sharing. With Git you can track the changes you make to your project so you always have a record of what you’ve worked on and can easily revert back to an older version if need be. It also makes working with others easier—groups of people can work together on the same project and merge their changes into one final source!
+- Configure and drive a **swerve drive** robot (kinematics, odometry, field-centric).
+- Log, replay, and diagnose with **AdvantageKit** + **AdvantageScope**.
+- Build reliable, easily configurable autonomous routines with trajectory following and vision
+- Create full-robot simulations (physics, sensors, and cameras), and create a workflow to test code without a robot.
 
-GitHub is a way to use the same power of Git all online with an easy-to-use interface. It’s used across the software world and beyond to collaborate and maintain the history of projects.
+### Expectations & ethos
 
-GitHub is home to some of the most advanced technologies in the world. Whether you're visualizing data or building a new game, there's a whole community and set of tools on GitHub that can get you to the next step. This course starts with the basics of GitHub, but we'll dig into the rest later.
+- **Hands-on first.** You’ll implement features you don’t fully “get” yet, then we’ll unpack the math and control theory behind them.
+- **Read the docs.** Weekly pre-reads are short and targeted. Do them.
+- **Version control is your friend.** You’ll use Git + GitHub for every assignment. Learn to love branches and PRs. During season, **never** commit directly to `main`. This is a lesson you don't learn fully until you suddenly have broken robot code, ctrl-z is broken, your computer crashed, and you have a match in 10 minutes.
+- **Logs or it didn’t happen.** Every feature ships with instrumentation and logging. You’ll learn to use logs to diagnose issues. We will focus heavily on the aspects of observability that are most useful for competition.
 
-## :octocat: Understanding the GitHub flow 
+---
 
-The GitHub flow is a lightweight workflow that allows you to experiment and collaborate on your projects easily, without the risk of losing your previous work.
+Here’s a revised version of your tutorial, rewritten for **clarity**, **step-by-step guidance**, and **student-friendliness**, while still keeping the competition-grade ethos intact.
 
-### Repositories
+---
 
-A repository is where your project work happens--think of it as your project folder. It contains all of your project’s files and revision history.  You can work within a repository alone or invite others to collaborate with you on those files.
+# FRC 7157 Bootcamp — Course Intro & Assignment A1: Git Boot-Up
 
-### Cloning 
+> **Welcome to Bootcamp!**
+> This course is about building **competition-ready robot code** using the exact stack we’ll use in season.
+>
+> - You’ll learn by **doing**, not just reading.
+> - We’ll start hands-on, then explain the theory behind what you built.
+> - We won’t cover “Java 101.” If you need a refresher, check out Codecademy, Oracle’s Java tutorials, or a Java 17 crash course on YouTube alongside this bootcamp.
 
-When a repository is created with GitHub, it’s stored remotely in the ☁️. You can clone a repository to create a local copy on your computer and then use Git to sync the two. This makes it easier to fix issues, add or remove files, and push larger commits. You can also use the editing tool of your choice as opposed to the GitHub UI. Cloning a repository also pulls down all the repository data that GitHub has at that point in time, including all versions of every file and folder for the project! This can be helpful if you experiment with your project and then realize you liked a previous version more. 
-To learn more about cloning, read ["Cloning a Repository"](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository). 
+---
 
-### Committing and pushing
-**Committing** and **pushing** are how you can add the changes you made on your local machine to the remote repository in GitHub. That way your instructor and/or teammates can see your latest work when you’re ready to share it. You can make a commit when you have made changes to your project that you want to “checkpoint.” You can also add a helpful **commit message** to remind yourself or your teammates what work you did (e.g. “Added a README with information about our project”).
+## What You’ll Learn
 
-Once you have a commit or multiple commits that you’re ready to add to your repository, you can use the push command to add those changes to your remote repository. Committing and pushing may feel new at first, but we promise you’ll get used to it 🙂
+- **Swerve drive programming** (kinematics, odometry, field-centric control).
+- **Logging & debugging** with AdvantageKit + AdvantageScope.
+- **Autonomous routines** with trajectories and vision.
+- **Robot simulation**: physics, sensors, cameras — test code without a robot.
 
-## 💻 GitHub terms to know 
+---
 
-### Repositories 
-We mentioned repositories already, they are where your project work happens, but let’s talk a bit more about the details of them! As you work more on GitHub you will have many repositories which may feel confusing at first. Fortunately, your ["GitHub dashboard"](https://docs.github.com/en/github/setting-up-and-managing-your-github-user-account/about-your-personal-dashboard) helps to easily navigate to your repositories and see useful information about them. Make sure you’re logged in to see it!
+## Our Approach
 
-Repositories also contain **README**s. You can add a README file to your repository to tell other people why your project is useful, what they can do with your project, and how they can use it. We are using this README to communicate how to learn Git and GitHub with you. 😄 
-To learn more about repositories read ["Creating, Cloning, and Archiving Repositories](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/about-repositories) and ["About README's"](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/about-readmes). 
+- **Hands-on first**: Build it now, understand it later.
+- **Read the docs**: Short weekly pre-reads give you just enough theory.
+- **Version control = safety net**: Git + GitHub protect you from mistakes. You’ll learn why we never commit directly to `main` during season.
+- **Logs or it didn’t happen**: Every feature will be tested and logged for debugging.
 
-### Branches
-You can use branches on GitHub to isolate work that you do not want merged into your final project just yet. Branches allow you to develop features, fix bugs, or safely experiment with new ideas in a contained area of your repository. Typically, you might create a new branch from the default branch of your repository—main. This makes a new working copy of your repository for you to experiment with. Once your new changes have been reviewed by a teammate, or you are satisfied with them, you can merge your changes into the default branch of your repository.
-To learn more about branching, read ["About Branches"](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-branches).
+---
 
-### Forks
-A fork is another way to copy a repository, but is usually used when you want to contribute to someone else’s project. Forking a repository allows you to freely experiment with changes without affecting the original project and is very popular when contributing to open source software projects!
-To learn more about forking, read ["Fork a repo"](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo)
+## Step 0: Setup (before class)
 
-### Pull requests
-When working with branches, you can use a pull request to tell others about the changes you want to make and ask for their feedback. Once a pull request is opened, you can discuss and review the potential changes with collaborators and add more changes if need be. You can add specific people as reviewers of your pull request which shows you want their feedback on your changes! Once a pull request is ready-to-go, it can be merged into your main branch.
-To learn more about pull requests, read ["About Pull Requests"](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests). 
+1. **Install WPILib**
 
+   - Go to [WPILib Releases](https://github.com/wpilibsuite/allwpilib/releases).
+   - Download the latest WPILib installer for your OS.
+   - Run the installer and choose:
 
-### Issues
-Issues are a way to track enhancements, tasks, or bugs for your work on GitHub. Issues are a great way to keep track of all the tasks you want to work on for your project and let others know what you plan to work on. You can also use issues to tell a favorite open source project about a bug you found or a feature you think would be great to add!
+     - **Install VS Code** (our IDE).
+     - If unsure, choose the option labeled _“fastest.”_
 
-For larger projects, you can keep track of many issues on a project board. GitHub Projects help you organize and prioritize your work and you can read more about them [in this "About Project boards document](https://docs.github.com/en/github/managing-your-work-on-github/about-project-boards). You likely won’t need a project board for your assignments, but once you move on to even bigger projects, they’re a great way to organize your team’s work!
-You can also link together pull requests and issues to show that a fix is in progress and to automatically close the issue when someone merges the pull request.
-To learn more about issues and linking them to your pull requests, read ["About Issues"](https://docs.github.com/en/github/managing-your-work-on-github/about-issues). 
+2. **Install Git**
 
-### Your user profile
+   - Follow the [WPILib Git Setup Docs](https://docs.wpilib.org/en/stable/docs/software/basic-programming/git-getting-started.html).
+   - Install Git for your OS and confirm it works:
 
-Your profile page tells people the story of your work through the repositories you're interested in, the contributions you've made, and the conversations you've had. You can also give the world a unique view into who you are with your profile README. You can use your profile to let future employers know all about you! 
-To learn more about your user profile and adding and updating your profile README, read ["Managing Your Profile README"](https://docs.github.com/en/github/setting-up-and-managing-your-github-profile/managing-your-profile-readme). 
+   ```bash
+   git --version
+   ```
 
-### Using markdown on GitHub 
+3. **Authenticate GitHub**
 
-You might have noticed already, but you can add some fun styling to your issues, pull requests, and files. ["Markdown"](https://guides.github.com/features/mastering-markdown/) is an easy way to style your issues, pull requests, and files with some simple syntax. This can be helpful to organize your information and make it easier for others to read. You can also drop in gifs and images to help convey your point!
-To learn more about using GitHub’s flavor of markdown, read ["Basic Writing and Formatting Syntax"](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax). 
+   - Make sure you can log in via HTTPS or SSH. (You’ll need this in A1.)
 
-### Engaging with the GitHub community
+---
 
-The GitHub community is vast. There are many types of people who use GitHub in their day to day—students like you, professional developers, hobbyists working on open source projects, and explorers who are just jumping into the world of software development on their own. There are many ways you can interact with the larger GitHub community, but here are three places where you can start. 
+## Key Git Terms (you’ll use these constantly)
 
-#### Starring repositories 
+- **Repository (repo)** = project folder + full history.
+- **Branch** = safe workspace off of `main`.
+- **Commit** = a saved change (like a checkpoint).
+- **Pull Request (PR)** = request to merge your branch into `main`.
+- **Fork** = your own copy of someone else’s repo.
+- **Issue** = a tracked task or bug.
 
-If you find a repository interesting or you want to keep track of it, star it! When you star a repository it’s also used as a signal to surface better recommendations on github.com/explore. If you’d like to get back to your starred repositories you can do so via your user profile. 
-To learn  more about starring repositories, read ["Saving Repositories with Stars"](https://docs.github.com/en/github/getting-started-with-github/saving-repositories-with-stars). 
+You’ll always:
 
-#### Following users 
+- Work on **branches**
+- Open **PRs** to merge changes
+- Never push straight to `main`
 
-You can follow people on GitHub to receive notifications about their activity and discover projects in their communities. When you follow a user, their public GitHub activity will show up on your dashboard so you can see all the cool things they are working on. 
-To learn more about following users, read ["Following People"](https://docs.github.com/en/github/getting-started-with-github/following-people).
+---
 
-#### Browsing GitHub Explore 
+# Assignment A1: Git Boot-Up
 
-GitHub Explore is a great place to do just that … explore :smile: You can find new projects, events, and developers to interact with.
+**Goal:** Learn the full GitHub workflow — fork → clone → branch → commit → push → PR → merge.
 
-You can check out the GitHub Explore website [at github.com/explore](https://github.com/explore). The more you interact with GitHub the more tailored your Explore view will be. 
+**Estimated Time:** 60–90 minutes
 
-## 📝 Optional next steps 
+### You’re Done When:
 
-* Open a pull request and let your teacher know that you’ve finished this course.  
-* Create a new markdown file in this repository. Let them know what you learned and what you are still confused about! Experiment with different styles!
-* Create your profile README. Let the world know a little bit more about you! What are you interested in learning? What are you working on? What's your favorite hobby? Learn more about creating your profile README in the document, ["Managing Your Profile README"](https://docs.github.com/en/github/setting-up-and-managing-your-github-profile/managing-your-profile-readme).
-* Go to your user dashboard and create a new repository. Experiment with the features within that repository to familiarize yourself with them. 
-* [Let us know what you liked or didn’t like about the content of this course](https://support.github.com/contact/education). What would you like to see more of? What would be interesting or helpful to your learning journey? 
+✅ You created a branch named `a1/<your-handle>-intro`
+✅ You added a file called `intro.md` with your student card
+✅ You made one tiny edit to this README
+✅ You pushed changes and opened a PR with:
 
-## 📚  Resources 
-* [A short video explaining what GitHub is](https://www.youtube.com/watch?v=w3jLJU7DT5E&feature=youtu.be) 
-* [Git and GitHub learning resources](https://docs.github.com/en/github/getting-started-with-github/git-and-github-learning-resources) 
-* [Understanding the GitHub flow](https://guides.github.com/introduction/flow/)
-* [How to use GitHub branches](https://www.youtube.com/watch?v=H5GJfcp3p4Q&feature=youtu.be)
-* [Interactive Git training materials](https://githubtraining.github.io/training-manual/#/01_getting_ready_for_class)
-* [GitHub's Learning Lab](https://lab.github.com/)
-* [Education community forum](https://education.github.community/)
-* [GitHub community forum](https://github.community/)
+- Title: `A1: <Your Name> — Git boot-up`
+- Linked issue: `#A1` (make one if missing)
+- Requested a reviewer
+
+---
+
+## Step-by-Step Guide
+
+1. **Clone your fork**
+   After accepting the assignment, you’ll see a repo called `git-intro-<your-handle>` under the organization's GitHub along with the URL. Clone it:
+
+   ```bash
+   git clone https://github.com/Mubotics7157/git-intro-<your-handle>.git
+   cd git-intro-<your-handle>
+   ```
+
+2. **Make a new branch**
+
+   ```bash
+   git checkout -b a1/<your-handle>-intro
+   ```
+
+   (This creates and switches to your feature branch.)
+
+3. Create an issue on GitHub using the web interface. Name it something like `Missing Intro`. You'll link to this in your PR. When you're done, you'll see one open issue in the repo.
+
+4. **Add your student card**
+   Create a new file:
+
+   ```
+   students/<your-handle>.md
+   ```
+
+   Paste in the **Submission Template** below.
+
+5. **Make a tiny README edit**
+
+   - Change one word in `README.md` (fix a typo, reword a sentence, etc.).
+
+6. **Stage, commit, and push**
+
+   ```bash
+   git add .
+   git commit -m "A1: add student card + small README change"
+   git push -u origin a1/<your-handle>-intro
+   ```
+
+7. **Open a Pull Request (PR)**
+
+   - Go to GitHub → Your repo.
+   - Click **Compare & Pull Request**.
+   - Base: `upstream/main` ← Compare: `origin/a1/<your-handle>-intro`
+   - Title: `A1: <Your Name> — Git boot-up`
+   - Link issue `#1` (or whatever number it is).
+   - Add a reviewer.
+
+8. **Respond to feedback**
+
+   - If your reviewer requests changes:
+
+     - Edit files locally
+     - `git add . && git commit -m "fixes"`
+     - `git push` (same branch)
+
+   - Your PR updates automatically.
+
+---
+
+## Submission Template (students/<your-handle>.md)
+
+```markdown
+# A1 — Student Card
+
+**Name:** Your Name  
+**Handle:** @your-handle  
+**OS:** (e.g., Windows 11)  
+**GitHub URL:** https://github.com/your-handle  
+**CS Experience:** (the coolest thing you’ve built with code)
+```
+
+---
+
+Don’t worry if Git feels confusing now. By the end, you’ll be doing this workflow on autopilot.
+
+---
